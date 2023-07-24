@@ -1,8 +1,4 @@
-import React from "react";
-
-type Props = {};
-
-const ErrorGeneric = (props: Props) => {
+const ErrorGeneric = () => {
   return <div>Oops! an error occured</div>;
 };
 
