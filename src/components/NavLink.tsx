@@ -1,6 +1,5 @@
 // NavBar.js
 import { NavLink } from "react-router-dom";
-import "./NavLink.css";
 const NavBar = () => {
   return (
     <div className=" bg-[#23252b] text-[#dadada] text-[16px] font-[400]">
