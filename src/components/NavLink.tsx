@@ -4,8 +4,8 @@ import "./NavLink.css";
 const NavBar = () => {
   return (
     <div className=" bg-[#23252b] text-[#dadada] text-[16px] font-[400]">
-      <div className="flex space-x-5 items-center justify-around h-[60px]">
-        <div className=" h-full flex items-center">
+      <div className="flex items-center justify-center space-x-[560px] h-[60px] ml-12">
+        <div className=" h-full flex items-center ">
           <NavLink
             className={
               "px-4 h-full flex items-center hover:bg-[#141519] brightness-110"
@@ -76,9 +76,11 @@ const NavBar = () => {
             </svg>
           </NavLink>
         </div>
-        <div className="flex h-full items-center">
+        <div className="flex h-full items-center ">
           <NavLink
-            className={"px-4 h-full flex items-center hover:bg-[#141519] "}
+            className={
+              "px-4 h-full flex items-center hover:bg-[#141519]  ml-[50px]"
+            }
             to="/"
           >
             <svg
