@@ -4,6 +4,7 @@ export default function Home() {
   return (
     <div>
       <NavBar></NavBar>
+      <Carousel></Carousel>
     </div>
   );
 }
