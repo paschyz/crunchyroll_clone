@@ -1,15 +1,29 @@
-import { React, useState, useEffect } from "react";
-import mangas from "../data/mangas_carousel.json";
+import { useEffect } from "react";
+import mangass from "../data/mangas_carousel.json";
+import { connect } from "react-redux";
+import { setMangas, setCurrentIndex } from "../reducers"; // Import your action creators from the reducers.ts file
+import { CarouselProps } from "../models/CarouselProps";
+import { CarouselState } from "../models/CarouselState.interface";
 
-export default function Carousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+function Carousel({
+  mangas,
+  currentIndex,
+  setMangas,
+  setCurrentIndex,
+}: CarouselProps) {
+  useEffect(() => {
+    setMangas(mangass);
+    console.log("Current index", currentIndex);
+  }, []);
 
   const goToNextItem = () => {
     setCurrentIndex((currentIndex + 1) % mangas.length);
+    console.log(currentIndex);
   };
 
   const goToPreviousItem = () => {
     setCurrentIndex((currentIndex + mangas.length - 1) % mangas.length);
+    console.log(currentIndex);
   };
 
   return (
@@ -25,26 +39,12 @@ export default function Carousel() {
             </span>
           </button>
 
-          <div className="bg-blue-400 h-[530px] min-w-900 max-w-5xl  ">
+          <div className=" h-[530px] min-w-900 max-w-5xl overflow-hidden ">
             <img
               src={`src/assets/images/${mangas[currentIndex].image}`}
               alt=""
-              className="w-full h-full object-fill"
+              className="w-full h-full object-cover "
             />
-            {/* {mangas.map((manga, index) => (
-            //TODO add carousel images here
-            <div className="px-10">
-              {manga.title}
-              <img src={`src/assets/images/${manga.image}`} alt="" />
-            </div>
-          ))} */}
-            {/* <div className="w-full h-64  "> */}
-            {/* <img
-              src={`src/assets/images/${mangas[currentIndex].image}`}
-              alt=""
-              className="object-cover"
-            /> */}
-            {/* </div> */}
           </div>
 
           <button
@@ -60,3 +60,16 @@ export default function Carousel() {
     </div>
   );
 }
+
+// Map the state from the Redux store to props
+const mapStateToProps = (state: CarouselState) => {
+  return {
+    mangas: state.mangas,
+    currentIndex: state.currentIndex,
+  };
+};
+
+// Connect the component to the Redux store
+export default connect(mapStateToProps, { setMangas, setCurrentIndex })(
+  Carousel
+);
