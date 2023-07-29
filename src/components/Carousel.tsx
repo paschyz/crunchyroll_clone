@@ -13,17 +13,16 @@ function Carousel({
 }: CarouselProps) {
   useEffect(() => {
     setMangas(mangass);
-    console.log("Current index", currentIndex);
   }, []);
 
   const goToNextItem = () => {
     setCurrentIndex((currentIndex + 1) % mangas.length);
-    console.log(currentIndex);
+    console.log("currentIndex:", currentIndex); // Add this line
   };
 
   const goToPreviousItem = () => {
     setCurrentIndex((currentIndex + mangas.length - 1) % mangas.length);
-    console.log(currentIndex);
+    console.log("currentIndex:", currentIndex); // Add this line
   };
 
   return (
@@ -40,11 +39,15 @@ function Carousel({
           </button>
 
           <div className=" h-[530px] min-w-900 max-w-5xl overflow-hidden ">
-            <img
-              src={`src/assets/images/${mangas[currentIndex].image}`}
-              alt=""
-              className="w-full h-full object-cover "
-            />
+            {mangas.length > 0 ? (
+              <img
+                src={`src/assets/images/${mangas[currentIndex].image}`}
+                alt=""
+                className="w-full h-full object-cover "
+              />
+            ) : (
+              <p>Loading...</p>
+            )}
           </div>
 
           <button
