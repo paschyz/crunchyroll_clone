@@ -27,18 +27,22 @@ function Carousel({
 
   return (
     <div>
-      <div className="h-[604px] bg-orange-300 ">
-        <div className="carousel flex justify-center pt-9">
+      <div
+        className={`h-[604px] ${
+          currentIndex % 2 ? "bg-[#2ABDBB]" : "bg-[#F57B20]"
+        } `}
+      >
+        <div className="carousel flex justify-center pt-8">
           <button
             className="w-10 h-10 flex justify-center duration-150 hover:bg-[#23252b] hover:text-white my-auto mx-10"
             onClick={() => goToPreviousItem()}
           >
-            <span className=" material-symbols-outlined m-auto pl-2">
+            <span className=" material-symbols-outlined m-auto pl-1">
               arrow_back_ios
             </span>
           </button>
 
-          <div className=" h-[530px] min-w-900 max-w-5xl overflow-hidden ">
+          <div className=" h-[540px] min-w-900 max-w-5xl overflow-hidden ">
             {mangas.length > 0 ? (
               <img
                 src={`${mangas[currentIndex].image}`}
@@ -54,7 +58,7 @@ function Carousel({
             className="w-10 h-10 flex justify-center duration-150 hover:bg-[#23252b] hover:text-white my-auto mx-10"
             onClick={() => goToNextItem()}
           >
-            <span className="material-symbols-outlined m-auto">
+            <span className="material-symbols-outlined m-auto ">
               arrow_forward_ios
             </span>{" "}
           </button>
