@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import mangass from "../data/mangas_carousel.json";
+import mangas_json from "../data/mangas_carousel.json";
 import { connect } from "react-redux";
 import { setMangas, setCurrentIndex } from "../reducers"; // Import your action creators from the reducers.ts file
 import { CarouselProps } from "../models/CarouselProps";
@@ -12,7 +12,7 @@ function Carousel({
   setCurrentIndex,
 }: CarouselProps) {
   useEffect(() => {
-    setMangas(mangass);
+    setMangas(mangas_json);
   }, []);
 
   const goToNextItem = () => {
@@ -31,7 +31,7 @@ function Carousel({
         <div className="carousel flex justify-center pt-9">
           <button
             className="w-10 h-10 flex justify-center duration-150 hover:bg-[#23252b] hover:text-white my-auto mx-10"
-            onClick={() => goToNextItem()}
+            onClick={() => goToPreviousItem()}
           >
             <span className=" material-symbols-outlined m-auto pl-2">
               arrow_back_ios
@@ -41,7 +41,7 @@ function Carousel({
           <div className=" h-[530px] min-w-900 max-w-5xl overflow-hidden ">
             {mangas.length > 0 ? (
               <img
-                src={`src/assets/images/${mangas[currentIndex].image}`}
+                src={`${mangas[currentIndex].image}`}
                 alt=""
                 className="w-full h-full object-cover "
               />
@@ -52,7 +52,7 @@ function Carousel({
 
           <button
             className="w-10 h-10 flex justify-center duration-150 hover:bg-[#23252b] hover:text-white my-auto mx-10"
-            onClick={() => goToPreviousItem()}
+            onClick={() => goToNextItem()}
           >
             <span className="material-symbols-outlined m-auto">
               arrow_forward_ios
