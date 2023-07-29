@@ -1,17 +1,24 @@
 [{
     "title":"Jujutsu Kaisen",
-    "image":"jujutsu_kaisen.webp"
+    "image":"https://static.crunchyroll.com/fms/landscape_poster/960x540/100/png/03deb8e9-dda4-47ee-9459-d939fcb62fe6.webp"
 },
     
     {
-    "title":"Jojolion",
-    "image":"jojolion.jpg"
+    "title":"JoJo's Bizarre Adventure",
+    "image":"https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/aaeca3e651bebe79fe808085d079feea.jpe"
 },{
-    "title":"Mushoku Tensei",
-    "image":"mushoku_tensei.webp"
+    "title":"Link Click",
+    "image":"https://static.crunchyroll.com/fms/landscape_poster/960x540/100/png/43a6be38-3941-4fd4-90d1-2a2fe975c862.webp"
 },{
-    "title":"Nier Automata",
-    "image":"nier_automata.webp"
+    "title":"Kingdom",
+    "image":"https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/a2f43c62aca08bcb650a3870c2b0f6ac.jpe"
+},
+{
+    "title":"Chainsaw Man",
+    "image":"https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/ea075b926e1073f4eb016bff8cdb434c.jpe"
+},
+{
+    "title":"Mob Psycho 100",
+    "image":"https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/c0e2440d3f27196ba37abaed8b824df5.jpe"
 }
-
 ]
