@@ -1,16 +1,29 @@
-import { useEffect } from "react";
-import mangass from "../data/mangas_carousel.json";
-import { connect } from "react-redux";
-import { setMangas, setCurrentIndex } from "../reducers"; // Import your action creators from the reducers.ts file
-import { CarouselProps } from "../models/CarouselProps";
-import { CarouselState } from "../models/CarouselState.interface";
 import TopPicks from "./TopPicks";
 import CarouselTabs from "./CarouselTabs";
+import FeedHeader from "./FeedHeader";
 export default function Feed() {
   return (
-    <div className="bg-black h-screen flex justify-center  ">
-      <CarouselTabs></CarouselTabs>
-      {/* <TopPicks></TopPicks> */}
+    <div className="bg-black h-screen flex justify-center ">
+      <div className=" h-screen w-[1045px]">
+        <div className=" flex justify-center">
+          <CarouselTabs></CarouselTabs>
+        </div>
+        <FeedHeader title="Top Picks for You" color="blue"></FeedHeader>
+        <TopPicks></TopPicks>
+        <FeedHeader title="Continue Watching" color="orange"></FeedHeader>
+        <FeedHeader
+          title="July 2023 Seasonal Sampler"
+          subtitle="Check out the first few episodes of these new shows for free!"
+          color="orange"
+        ></FeedHeader>
+        <FeedHeader title="New Episodes" color="blue"></FeedHeader>
+
+        <FeedHeader
+          title="Free-to-Watch Anime in France!"
+          subtitle="Watch some of our most popular titles right here!"
+          color="orange"
+        ></FeedHeader>
+      </div>
     </div>
   );
 }
