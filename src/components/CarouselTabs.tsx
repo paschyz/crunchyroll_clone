@@ -21,7 +21,7 @@ function CarouselTabs({
   };
   return (
     <div className="flex h-[74px] space-x-[0.75rem] items-end">
-      {mangas.map((manga, index) => {
+      {mangas.map((_manga, index) => {
         return (
           <button
             onClick={() => goToIndex(index)}

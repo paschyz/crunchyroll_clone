@@ -1,6 +1,4 @@
-import TopPicks from "./TopPicks";
 import CarouselTabs from "./CarouselTabs";
-import FeedHeader from "./FeedHeader";
 export default function Feed() {
   return (
     <div className="bg-black h-[269px] flex justify-center ">
