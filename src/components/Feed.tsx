@@ -3,12 +3,12 @@ import CarouselTabs from "./CarouselTabs";
 import FeedHeader from "./FeedHeader";
 export default function Feed() {
   return (
-    <div className="bg-black h-screen flex justify-center ">
-      <div className=" h-screen w-[1045px]">
+    <div className="bg-black h-[269px] flex justify-center ">
+      <div className="h-[269px] w-[1045px]">
         <div className=" flex justify-center">
           <CarouselTabs></CarouselTabs>
         </div>
-        <FeedHeader title="Top Picks for You" color="blue"></FeedHeader>
+        {/* <FeedHeader title="Top Picks for You" color="blue"></FeedHeader>
         <TopPicks></TopPicks>
         <FeedHeader title="Continue Watching" color="orange"></FeedHeader>
         <FeedHeader
@@ -22,7 +22,7 @@ export default function Feed() {
           title="Free-to-Watch Anime in France!"
           subtitle="Watch some of our most popular titles right here!"
           color="orange"
-        ></FeedHeader>
+        ></FeedHeader> */}
       </div>
     </div>
   );
