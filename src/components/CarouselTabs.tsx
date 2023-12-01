@@ -21,16 +21,14 @@ function CarouselTabs({
   };
   return (
     <div className="flex h-[74px] space-x-[0.75rem] items-end">
-      {mangas.map((_manga, index) => {
+      {mangas.map((manga, index) => {
         return (
           <button
             onClick={() => goToIndex(index)}
             key={index}
-            className="bg-[#23252b] hover:bg-[#393B41] h-[3.4rem] w-[10.25rem] text-left px-2 pb-1"
+            className="bg-[#23252b] hover:bg-[#393B41] h-[3.4rem] w-[10.25rem] text-left px-2 pb-1 flex items-center justify-center"
           >
-            <div className=" text-white text-[0.75rem] leading-[135%] bold font-semibold">
-              JUJUTSU KAISEN Season 2 New Episodes
-            </div>
+            <div className="text-white">{manga.title}</div>
           </button>
         );
       })}
